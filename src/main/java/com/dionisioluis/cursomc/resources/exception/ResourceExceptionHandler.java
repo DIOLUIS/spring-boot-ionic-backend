@@ -1,5 +1,6 @@
 package com.dionisioluis.cursomc.resources.exception;
 
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,7 @@ public class ResourceExceptionHandler {
 	}
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	public ResponseEntity<StandardError> validadtion(MethodArgumentNotValidException e, HttpServletRequest request) {
+	public ResponseEntity<StandardError> validation(MethodArgumentNotValidException e, HttpServletRequest request) {
 		
 		ValidationError err = new ValidationError(HttpStatus.BAD_REQUEST.value(),"Erro de validação", System.currentTimeMillis());
 			for (FieldError x : e.getBindingResult().getFieldErrors()) {
