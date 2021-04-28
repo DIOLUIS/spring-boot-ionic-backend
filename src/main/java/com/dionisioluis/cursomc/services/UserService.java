@@ -6,7 +6,7 @@ import com.dionisioluis.cursomc.security.UserSS;
 
 public class UserService {
 
-	public static UserSS authenticaded() {
+	public static UserSS authenticated() {
 		//try and catch exceptions
 		try {
 			//* return user login in system 
